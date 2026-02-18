@@ -74,9 +74,9 @@ body { background: var(--bg); color: var(--ink); font-family: var(--f); font-siz
 .sec { max-width: var(--max); margin: 0 auto; padding: 64px var(--pad); border-bottom: 1px solid var(--line); }
 
 /* ROW */
-.row { display: grid; grid-template-columns: 130px 1fr; gap: 0 48px; margin-bottom: 40px; }
+.row { display: grid; grid-template-columns: 136px 1fr; gap: 0 48px; margin-bottom: 40px; align-items: start; }
 .row:last-child { margin-bottom: 0; }
-.rl { font-size: 10px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; padding-top: 3px; color: var(--ink3); font-family: var(--mono); }
+.rl { font-size: 10px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; padding-top: 3px; color: var(--ink3); font-family: var(--mono); width: 136px; flex-shrink: 0; word-break: keep-all; }
 .rl.c1{color:var(--c1);} .rl.c2{color:var(--c2);} .rl.c3{color:var(--c3);} .rl.co{color:var(--co);}
 
 /* PROJECT HEADER */
@@ -872,14 +872,12 @@ strong { font-weight: 700; color: var(--ink); }
       </div>
     </div>
   </div>
-    </div>
-  </div>
 
   <div class="row">
     <div class="rl c3">통계 분석</div>
-    <div style="display:flex; flex-direction:column; gap:16px;">
+    <div>
       <!-- t-검정 -->
-      <div class="ci-wrap">
+      <div class="ci-wrap" style="margin-bottom:16px;">
         <div class="chart-box">
           <div class="chart-ttl">독립표본 t-검정 — 목표 달성 주수</div>
           <canvas id="c04t" height="140"></canvas>
