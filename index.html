@@ -222,7 +222,6 @@ strong { font-weight: 700; color: var(--ink); }
     <a href="#p01"><span class="nn">01</span> 텍스트 마이닝</a>
     <a href="#p02"><span class="nn">02</span> 예보 오차</a>
     <a href="#p03"><span class="nn">03</span> 수면 분류</a>
-    <a href="#p04"><span class="nn">04</span> A/B 테스트</a>
   </div>
 </nav>
 
@@ -239,7 +238,7 @@ strong { font-weight: 700; color: var(--ink); }
     <div class="hf-item">
       <div class="hf-icon">🧠</div>
       <div class="hf-title">모델 설계 · 통계 분석</div>
-      <div class="hf-desc">문제의 원인을 규명한 뒤 해결책에 맞는 모델 구조를 설계합니다. 또한 SOTA 모델 전이학습 및 파인튜닝 경험이 있으며, A/B 테스트에서는 다각도 분석으로 효과를 입체적으로 검증합니다.</div>
+      <div class="hf-desc">문제의 원인을 규명한 뒤 해결책에 맞는 모델 구조를 설계합니다. 또한 SOTA 모델 전이학습 및 파인튜닝 경험이 있으며, 다각도 분석으로 효과를 입체적으로 검증합니다.</div>
     </div>
     <div class="hf-item">
       <div class="hf-icon">🤝</div>
@@ -256,7 +255,6 @@ strong { font-weight: 700; color: var(--ink); }
     <div class="toc-item t1"><a href="#p01"><span class="toc-num">01</span><span class="toc-name">텍스트 마이닝 기반<br>데이터 직군 직무 분석</span></a></div>
     <div class="toc-item t2"><a href="#p02"><span class="toc-num">02</span><span class="toc-name">예보 오차 방향성 예측<br>조건부 앙상블 모델</span></a></div>
     <div class="toc-item t3"><a href="#p03"><span class="toc-num">03</span><span class="toc-name">뇌파 기반 수면<br>단계 분류 모델</span></a></div>
-    <div class="toc-item t4"><a href="#p04"><span class="toc-num">04</span><span class="toc-name">맞춤형 메시지<br>A/B 테스트</span></a></div>
   </div>
 </div>
 
@@ -784,151 +782,6 @@ strong { font-weight: 700; color: var(--ink); }
 
 
 <!-- ═══════════════════════════════════ P04 ═══════════════════════════════════ -->
-<div class="sec" id="p04">
-  <div class="row">
-    <div class="rl c3">Overview</div>
-    <div>
-      <div class="pnum n4">PROJECT 04</div>
-      <div class="ptitle">맞춤형 메시지 효과 분석을 위한<br>A/B 테스트</div>
-      <div class="pdesc">서울시 M구의 걷기 실천율이 지속적으로 낮아 행동 개입 전략의 필요성이 요구되는 상황. 걷기 실천율은 지표 정의에 민감한 변수이므로 효과 왜곡을 방지하기 위한 <strong style="white-space:nowrap;">분석 방법 설계가 핵심</strong>이었습니다.</div>
-      <div class="ptags">
-        <span class="ptag">Python</span><span class="ptag">pandas</span><span class="ptag">scipy.stats</span>
-        <span class="ptag">lifelines</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="rl c3">Situation</div>
-    <div class="sits">
-      <div class="sit"><span class="sn c3">S1</span>서울시 M구의 걷기 실천율이 지속적으로 낮은 수준 → 행동 개입 전략의 필요성</div>
-      <div class="sit"><span class="sn c3">S2</span>걷기 실천율은 지표 정의에 민감한 변수 → 효과 왜곡 방지를 위한 분석 방법 설계 필요</div>
-    </div>
-  </div>
-
-  <!-- 실험 설계 파이프라인 — 2행 구조 -->
-  <div class="row">
-    <div class="rl c3">실험 설계</div>
-    <div class="pipe-scroll">
-      <div class="pipe" style="flex-direction:column; gap:14px; min-width:max-content;">
-        <!-- 1행: 문제→설계 흐름 -->
-        <div style="display:inline-flex; align-items:center; gap:0;">
-          <div class="pnode"><div class="pico ic3">🚶</div><div class="pname">문제 정의</div><div class="psub">M구 걷기<br>실천율 저하</div></div>
-          <div class="parr"><div class="pa-l"></div><div class="pa-h"></div></div>
-          <div class="pnode"><div class="pico icp">💡</div><div class="pname">가설 설정</div><div class="psub">맞춤형 메시지<br>→ 실천율 향상</div></div>
-          <div class="parr"><div class="pa-l"></div><div class="pa-h"></div></div>
-          <!-- 실험 설계 그룹 -->
-          <div class="pgroup">
-            <div class="pgroup-label" style="color:var(--c3);">실험 설계</div>
-            <div class="pgroup-inner pg-red">
-              <div class="pnode"><div class="pico ico">🎲</div><div class="pname">층화<br>무작위 추출</div><div class="psub">성별·연령<br>통제 196명</div></div>
-              <div class="parr"><div class="pa-l"></div><div class="pa-h"></div></div>
-              <div style="display:flex; flex-direction:column; gap:8px; justify-content:center;">
-                <div style="display:flex; align-items:center; gap:8px; background:var(--c3l); border:1px solid var(--c3m); border-radius:6px; padding:8px 12px;">
-                  <span style="font-size:14px;">📨</span>
-                  <div><div style="font-size:10px;font-weight:700;color:var(--c3);font-family:var(--mono);">실험군 98명</div><div style="font-size:9px;color:var(--ink3);">맞춤형 메시지 수신</div></div>
-                </div>
-                <div style="display:flex; align-items:center; gap:8px; background:var(--bg2); border:1px solid var(--line); border-radius:6px; padding:8px 12px;">
-                  <span style="font-size:14px;">🚫</span>
-                  <div><div style="font-size:10px;font-weight:700;color:var(--ink2);font-family:var(--mono);">대조군 98명</div><div style="font-size:9px;color:var(--ink3);">메시지 미수신</div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="parr"><div class="pa-l"></div><div class="pa-h"></div></div>
-          <div class="pnode"><div class="pico ict">📱</div><div class="pname">걷기 앱 로그</div><div class="psub">12주 관측<br>25,000보 목표</div></div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="rl c3">분석 방법</div>
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px;">
-      <div style="background:var(--c3l); border:1px solid var(--c3m); border-radius:8px; padding:18px 20px;">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-          <div class="pico ic3" style="width:38px;height:38px;border-radius:8px;font-size:16px;flex-shrink:0;">📊</div>
-          <div style="font-size:13px;font-weight:700;color:var(--c3);">독립표본 t-검정</div>
-        </div>
-        <div style="font-size:11px;color:var(--ink3);font-weight:600;margin-bottom:6px;">목표 달성 주수</div>
-        <div style="font-size:12px;color:var(--ink2);line-height:1.7;">12주 동안 목표(25,000보) 달성 총 주수를 비교하여 <strong style="white-space:nowrap;">전체 기간 누적 효과</strong>를 측정 — 단기가 아닌 장기 실천 총량을 반영</div>
-      </div>
-      <div style="background:var(--c3l); border:1px solid var(--c3m); border-radius:8px; padding:18px 20px;">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-          <div class="pico ic3" style="width:38px;height:38px;border-radius:8px;font-size:16px;flex-shrink:0;">📉</div>
-          <div style="font-size:13px;font-weight:700;color:var(--c3);">카이제곱 검정</div>
-        </div>
-        <div style="font-size:11px;color:var(--ink3);font-weight:600;margin-bottom:6px;">주차별 목표 달성률</div>
-        <div style="font-size:12px;color:var(--ink2);line-height:1.7;">각 주차별 25,000보 달성 여부(이진 변수)를 분석하여 <strong style="white-space:nowrap;">시간 경과에 따른 효과 변화 패턴</strong>을 파악하고, 언제부터 효과가 나타나는지 추적</div>
-      </div>
-      <div style="background:var(--c3l); border:1px solid var(--c3m); border-radius:8px; padding:18px 20px;">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-          <div class="pico ic3" style="width:38px;height:38px;border-radius:8px;font-size:16px;flex-shrink:0;">📈</div>
-          <div style="font-size:13px;font-weight:700;color:var(--c3);">생존 분석</div>
-        </div>
-        <div style="font-size:11px;color:var(--ink3);font-weight:600;margin-bottom:6px;">프로그램 이탈율</div>
-        <div style="font-size:12px;color:var(--ink2);line-height:1.7;">중도 탈락까지의 기간을 분석하여 <strong style="white-space:nowrap;">행동 지속성</strong>에 영향을 주는지 판단 — 탈락을 이진 분류가 아닌 시간 개념으로 처리</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="rl c3">통계 분석</div>
-    <div>
-      <!-- t-검정 -->
-      <div class="ci-wrap" style="margin-bottom:16px;">
-        <div class="chart-box">
-          <div class="chart-ttl">독립표본 t-검정 — 목표 달성 주수</div>
-          <canvas id="c04t" height="140"></canvas>
-        </div>
-        <div class="insight">
-          <div class="ins-item i3"><div class="ins-num c3">10.82주</div><div class="ins-label">실험군 달성 주수</div><div class="ins-desc">대조군(9.56주) 대비 유의미하게 높음 (t = −2.08, p &lt; .05)</div></div>
-          <div class="ins-item i3"><div class="ins-num c3">+1.26주</div><div class="ins-label">목표 달성 주수 증가</div><div class="ins-desc">12주 기준 약 1주 이상 더 달성</div></div>
-          <div class="ins-item i3"><div class="ins-num c3">HR=0.48</div><div class="ins-label">탈락 위험 50% 감소</div><div class="ins-desc">탈락률 대조군 20.9% vs 실험군 10.9%</div></div>
-        </div>
-      </div>
-      <!-- 카이제곱 + 생존 -->
-      <div class="chart-grid2">
-        <div class="chart-box">
-          <div class="chart-ttl">카이제곱 — 주차별 25,000보 달성률</div>
-          <canvas id="c04chi" height="180"></canvas>
-          <div style="font-size:11px;color:var(--ink3);margin-top:10px;line-height:1.5;">12주 중 <strong style="color:var(--c3);">11주</strong>에서 실험군이 더 높은 달성률. <strong style="color:var(--c3);">5주차 이후</strong> 통계적으로 유의미한 차이 (p &lt; .05)</div>
-        </div>
-        <div class="chart-box">
-          <div class="chart-ttl">생존 분석 — 탈락까지 기간</div>
-          <canvas id="c04surv" height="180"></canvas>
-          <div style="font-size:11px;color:var(--ink3);margin-top:10px;line-height:1.5;">탈락률 대조군 <strong style="white-space:nowrap;">20.9%</strong> vs 실험군 <strong style="color:var(--c3);">10.9%</strong> · HR = 0.48 → 탈락 위험 <strong style="color:var(--c3);">50% 감소</strong></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="rl c3">결론 · 결과</div>
-    <div>
-      <div class="conc" style="margin-bottom:14px;">
-        <div class="conc-item"><span class="cnum">01</span><span>맞춤형 메시지는 걷기 실천을 <strong style="white-space:nowrap;">시작</strong>하게 하는 것보다 시간이 지날수록 약화되는 실천을 <strong style="white-space:nowrap;">유지</strong>하도록 돕는 역할</span></div>
-        <div class="conc-item"><span class="cnum">02</span><span>행동 개입의 효과는 <strong style="white-space:nowrap;">단기 성과보다 장기 유지 관점</strong>에서 더 분명하게 드러남</span></div>
-        <div class="conc-item"><span class="cnum">03</span><span>맞춤형 메시지는 걷기 실천율 향상에 <strong style="white-space:nowrap;">유의미한 영향</strong>을 미침</span></div>
-      </div>
-      <div class="result res3" style="margin-bottom:14px;">
-        <div class="res-main">🏆 분석 결과</div>
-        <div class="rpill">목표달성주수 <strong style="white-space:nowrap;">9.56 → 10.82주</strong> (p &lt; .05)</div>
-        <div class="rpill">탈락 위험 <strong style="white-space:nowrap;">50% 감소</strong> (HR=0.48)</div>
-        <div class="rpill">탈락률 대조군 20.9% vs 실험군 10.9%</div>
-      </div>
-      <div class="learn">
-        <div class="learn-h">Lessons Learned</div>
-        <div class="li"><div class="ldot d3"></div><span>행동 지표는 정의 방식에 따라 해석이 달라지므로 <strong style="white-space:nowrap;">지표 특성을 반영한 분석 설계</strong>가 중요</span></div>
-        <div class="li"><div class="ldot d3"></div><span>A/B 테스트에서 <strong style="white-space:nowrap;">층화 무작위 추출</strong>과 통제변수 설정이 인과적 효과 추정에 필수적</span></div>
-        <div class="li"><div class="ldot d3"></div><span>단일 지표가 아닌 t-검정, 카이제곱, 생존분석을 병행하여 <strong style="white-space:nowrap;">행동의 유지 효과</strong>를 입체적으로 검증</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
 <script>
 Chart.defaults.font.family = "'SUIT Variable','SUIT',sans-serif";
@@ -986,7 +839,7 @@ new Chart(document.getElementById('c02perf'),{
   data:{
     labels:['선형 모델 (Ridge)','딥러닝 모델 (ConvNeXt)','앙상블 모델'],
     datasets:[{label:'코사인 유사도',data:[0.59,0.56,0.66],
-      backgroundColor:[GR,'rgba(108,43,217,0.6)',C1B],
+      backgroundColor:[GR,'rgba(108,43,217,0.6)','rgba(194,65,12,0.75)'],
       borderRadius:4,borderSkipped:false}]
   },
   options:{
@@ -1025,61 +878,7 @@ new Chart(document.getElementById('c03perf'),{
     }
   }
 });
-
-/* P04 t-검정 */
-new Chart(document.getElementById('c04t'),{
-  type:'bar',
-  data:{
-    labels:['대조군 (메시지 X)','실험군 (메시지 O)'],
-    datasets:[{label:'목표 달성 주수',data:[9.56,10.82],
-      backgroundColor:[GR,C3B],borderRadius:4,borderSkipped:false}]
-  },
-  options:{
-    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`${c.parsed.y}주`}}},
-    scales:{
-      y:{min:8,max:12,grid:{color:'rgba(0,0,0,0.04)'},ticks:{font:{size:11},callback:v=>v+'주'}},
-      x:{grid:{display:false},ticks:{font:{size:11}}}
-    }
-  }
-});
-
-/* P04 카이제곱 */
-new Chart(document.getElementById('c04chi'),{
-  type:'line',
-  data:{
-    labels:['1','2','3','4','5','6','7','8','9','10','11','12'],
-    datasets:[
-      {label:'대조군',data:[83,88,80,80,79,76,75,74,76,74,79,73],borderColor:'rgba(156,163,175,0.8)',backgroundColor:'transparent',borderWidth:1.5,pointRadius:2,tension:0.3},
-      {label:'실험군',data:[85,90,90,91,94,91,94,93,93,94,91,87],borderColor:C3,backgroundColor:'transparent',borderWidth:2,pointRadius:2,tension:0.3}
-    ]
-  },
-  options:{
-    plugins:{legend:{labels:{font:{size:10},padding:10}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${c.parsed.y}%`}}},
-    scales:{
-      y:{min:65,max:100,grid:{color:'rgba(0,0,0,0.04)'},ticks:{font:{size:10},callback:v=>v+'%'}},
-      x:{grid:{display:false},ticks:{font:{size:10}},title:{display:true,text:'주차',font:{size:10},color:'#999'}}
-    }
-  }
-});
-
-/* P04 생존 분석 */
-new Chart(document.getElementById('c04surv'),{
-  type:'line',
-  data:{
-    labels:[0,1,2,3,4,5,6,7,8,9,10,11,12,13],
-    datasets:[
-      {label:'대조군 (탈락률 20.9%)',data:[1,1,0.99,0.97,0.95,0.94,0.92,0.90,0.88,0.87,0.85,0.83,0.80,0.79],borderColor:'rgba(156,163,175,0.8)',backgroundColor:'rgba(156,163,175,0.07)',fill:true,borderWidth:1.5,pointRadius:2,stepped:true},
-      {label:'실험군 (탈락률 10.9%)',data:[1,1,1,0.99,0.99,0.98,0.97,0.97,0.96,0.95,0.95,0.93,0.92,0.91],borderColor:C3,backgroundColor:'rgba(200,30,30,0.07)',fill:true,borderWidth:2,pointRadius:2,stepped:true}
-    ]
-  },
-  options:{
-    plugins:{legend:{labels:{font:{size:10},padding:10}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${(c.parsed.y*100).toFixed(0)}%`}}},
-    scales:{
-      y:{min:0.75,max:1.02,grid:{color:'rgba(0,0,0,0.04)'},ticks:{font:{size:10},callback:v=>(v*100).toFixed(0)+'%'}},
-      x:{grid:{display:false},ticks:{font:{size:10}},title:{display:true,text:'주차',font:{size:10},color:'#999'}}
-    }
-  }
-});
 </script>
+
 </body>
 </html>
